@@ -21,5 +21,10 @@ namespace DBSchool
         {
             Environment.Exit(0);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
