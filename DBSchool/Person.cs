@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace DBSchool
 {
-    class Person
+    public class Person
     {
-        private int id;
-        private int level;
-        private string lastName;
-        private string name;
-        private string patronymic;
-        private string sex;
-        private string birthday;
-        private string number;
-        private string email;
-        private string position;
-        private string secretWord;
-        private string username;
-        private string password;
-        
+        public int id { set; get; }
+        public int level { set; get; }
+        public string lastName { set; get; }
+        public string name { set; get; }
+        public string patronymic { set; get; }
+        public string sex { set; get; }
+        public string birthday { set; get; }
+        public string number { set; get; }
+        public string email { set; get; }
+        public string position { set; get; }
+        public string secretWord { set; get; }
+        public string username { set; get; }
+        public string password { set; get; }
+        public string fullPosition { set; get; }
+
         public Person()
         {
             id = 0;
@@ -147,5 +148,6 @@ namespace DBSchool
             return password;
         }
         #endregion
+
     }
 }

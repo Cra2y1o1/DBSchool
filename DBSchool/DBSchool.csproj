@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +60,49 @@
     <Compile Include="customTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DBForms\ChangeFullPositions.cs" />
+    <Compile Include="DBForms\ChangeFullPositions.Designer.cs">
+      <DependentUpon>ChangeFullPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\ChangeMark.cs" />
+    <Compile Include="DBForms\ChangeMark.Designer.cs">
+      <DependentUpon>ChangeMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\ControlDB.cs" />
+    <Compile Include="DBForms\ControlDB.Designer.cs">
+      <DependentUpon>ControlDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\employers.cs" />
+    <Compile Include="DBForms\employers.Designer.cs">
+      <DependentUpon>employers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\marks.cs" />
+    <Compile Include="DBForms\marks.Designer.cs">
+      <DependentUpon>marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\Parents.cs" />
+    <Compile Include="DBForms\Parents.Designer.cs">
+      <DependentUpon>Parents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\SetUpChild.cs" />
+    <Compile Include="DBForms\SetUpChild.Designer.cs">
+      <DependentUpon>SetUpChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\SetUpClass.cs" />
+    <Compile Include="DBForms\SetUpClass.Designer.cs">
+      <DependentUpon>SetUpClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\Studiers.cs" />
+    <Compile Include="DBForms\Studiers.Designer.cs">
+      <DependentUpon>Studiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBForms\TimeTable.cs" />
+    <Compile Include="DBForms\TimeTable.Designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBSchoolDataSet.cs">
+      <DependentUpon>DBSchoolDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DBSchoolDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,6 +113,13 @@
     </Compile>
     <Compile Include="employer.Designer.cs">
       <DependentUpon>employer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mailbot.cs" />
+    <Compile Include="myAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myAccount.Designer.cs">
+      <DependentUpon>myAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -81,11 +136,45 @@
     <Compile Include="student.Designer.cs">
       <DependentUpon>student.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkWithDB.cs" />
     <EmbeddedResource Include="aunt.resx">
       <DependentUpon>aunt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\ChangeFullPositions.resx">
+      <DependentUpon>ChangeFullPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\ChangeMark.resx">
+      <DependentUpon>ChangeMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\ControlDB.resx">
+      <DependentUpon>ControlDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\employers.resx">
+      <DependentUpon>employers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\marks.resx">
+      <DependentUpon>marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\Parents.resx">
+      <DependentUpon>Parents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\SetUpChild.resx">
+      <DependentUpon>SetUpChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\SetUpClass.resx">
+      <DependentUpon>SetUpClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\Studiers.resx">
+      <DependentUpon>Studiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBForms\TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employer.resx">
       <DependentUpon>employer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myAccount.resx">
+      <DependentUpon>myAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -159,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\фон_с.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\фон1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
